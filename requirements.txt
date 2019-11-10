@@ -1,0 +1,10 @@
+discord.py[voice]==1.2.4
+mysql-connector-python==8.0.5
+markovify==0.7.2
+pyramid==1.9.1
+pytest==3.3.1
+pyyaml==3.12
+sqlalchemy==1.1.15
+tenacity==4.7.1
+wikipedia==1.4.0
+wiktionaryparser==0.0.5

@@ -1,0 +1,14 @@
+discord.py[voice]
+ipython
+ipdb
+mysql-connector-python
+markovify
+pre-commit
+pyramid
+pytest
+pyyaml
+sqlalchemy
+tenacity
+wheel
+wikipedia
+wiktionaryparser
