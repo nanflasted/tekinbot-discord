@@ -92,6 +92,7 @@ class ThreadTheme(commands.Cog):
             f'{self.bot.user.mention} post me the thread theme'
         ):
             return
+        current_topic_theme = self.bot.theme
         if not self.bot.theme:
             current_topic_theme = self.check_current_topic_theme(
                 message.guild.system_channel
