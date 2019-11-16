@@ -49,6 +49,18 @@ class SimpleResponses(commands.Cog):
     async def ping(self, ctx):
         await ctx.send('Pong')
 
+    @commands.command(
+        description="Displays Tekin's github repo",
+        help="""
+        Usage: @TekinBot gitrepo
+        """
+    )
+    async def gitrepo(self, ctx):
+        await ctx.send(
+            'https://github.com/nanflasted/tekinbot-discord\n'
+            'Talk to @nanflasted to be added to the repo!'
+        )
+
 
 def setup(bot):
     bot.add_cog(SimpleResponses(bot))
