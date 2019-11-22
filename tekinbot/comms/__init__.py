@@ -1,4 +1,5 @@
 tekin_extensions = [
+    'tekinbot.comms.message.karma',
     'tekinbot.comms.message.simple_responses',
     'tekinbot.comms.message.poll',
     'tekinbot.comms.message.roll',
