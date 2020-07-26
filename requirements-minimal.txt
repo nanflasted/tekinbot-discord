@@ -1,0 +1,10 @@
+discord.py[voice]
+mysql-connector-python
+markovify
+pyramid
+pytest
+pyyaml
+sqlalchemy
+tenacity
+wikipedia
+wiktionaryparser
