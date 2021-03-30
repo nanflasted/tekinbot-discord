@@ -16,7 +16,7 @@ pickleshare==0.7.5
 pre-commit==2.6.0
 prompt-toolkit==3.0.5
 ptyprocess==0.6.0
-Pygments==2.6.1
+Pygments==2.7.4
 requirements-tools==1.2.3
 toml==0.10.1
 traitlets==4.3.3
