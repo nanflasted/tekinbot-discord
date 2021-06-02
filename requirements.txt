@@ -35,7 +35,7 @@ tenacity==6.2.0
 translationstring==1.4
 typing-extensions==3.7.4.2
 Unidecode==1.1.1
-urllib3==1.25.10
+urllib3==1.26.5
 venusian==3.0.0
 wcwidth==0.2.5
 WebOb==1.8.6
