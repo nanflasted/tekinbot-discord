@@ -21,4 +21,4 @@ requirements-tools==1.2.3
 toml==0.10.1
 traitlets==4.3.3
 virtualenv==20.0.28
-wheel==0.34.2
+wheel==0.38.1
