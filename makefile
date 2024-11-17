@@ -10,6 +10,11 @@ venv:
 	poetry install --no-root
 	poetry env use python3
 
+dev-venv:
+	poetry install --with=dev --no-root
+	poetry env use python3
+	poetry shell
+
 install-hooks:
 	poetry run pre-commit install -f --install-hooks
 

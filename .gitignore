@@ -110,3 +110,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# don't commit secrets
+.tekin-secrets.yaml
