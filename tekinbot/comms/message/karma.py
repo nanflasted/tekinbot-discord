@@ -9,7 +9,7 @@ from tekinbot.db.models.karma import Karma
 from tekinbot.utils.db import get_session
 
 
-comm_re = re.compile('(?P<target>.*)(\+\+|--)', flags=re.IGNORECASE)
+comm_re = re.compile(r'(?P<target>.*)(\+\+|--)', flags=re.IGNORECASE)
 
 resp_tmpl = '{} has a karma of {}, and gave out {} amount of karma.'
 
@@ -101,7 +101,7 @@ class KarmaKeeper(commands.Cog):
 
         # parse each token for ++/--s
         matches = [re.match(
-            '(?P<target>.+?)(?P<inc>(\+\+|--))', t
+            r'(?P<target>.+?)(?P<inc>(\+\+|--))', t
         ) for t in tokens]
 
         # filter out matches for the source user

@@ -6,13 +6,13 @@ from tekinbot.comms.message.searching import youtube
 
 
 is_url = re.compile(
-    '^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?'
-    '[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
+    r'^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?'
+    r'[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
 )
 
 
 thread_theme_format = re.compile(
-    '.*\[Thread theme: (?P<theme>[^\]]*)\].*',
+    r'.*\[Thread theme: (?P<theme>[^\]]*)\].*',
     flags=re.IGNORECASE
 )
 

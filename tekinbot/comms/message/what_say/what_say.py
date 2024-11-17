@@ -6,7 +6,7 @@ from tekinbot.utils.config import tekin_id
 from tekinbot.utils.db import get_session
 
 comm_re = re.compile(
-    f'{tekin_id} what can you say about (?P<subject>[\w\ \']+)($|\W*)',
+    rf'{tekin_id} what can you say about (?P<subject>[\w\ \']+)($|\W*)',
     flags=re.IGNORECASE
 )
 
