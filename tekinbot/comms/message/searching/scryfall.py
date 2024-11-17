@@ -90,7 +90,7 @@ class ScryfallSearches(commands.Cog):
 
     async def scryfall_callable(self, ctx, query, exact):
         result = search(query, exact)
-        if type(result) == str:
+        if isinstance(result, str):
             await ctx.send(content=result)
         else:
             await ctx.send(

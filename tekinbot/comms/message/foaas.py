@@ -8,7 +8,7 @@ from tekinbot.utils.config import tekin_id
 
 comm_re = re.compile(
     f'{tekin_id} tell (?P<target1>.*) to f[uv]ck off|'
-    '.*f[uv]ck( you| off),? (?P<target>[\w| \']*).*',
+    r'.*f[uv]ck( you| off),? (?P<target>[\w| \']*).*',
     flags=re.IGNORECASE
 )
 

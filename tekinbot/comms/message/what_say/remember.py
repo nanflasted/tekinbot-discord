@@ -8,8 +8,8 @@ from tekinbot.utils.db import get_session
 
 aux_verbs = 'is|are|was|were|be|am'
 comm_re = re.compile(
-    f'{tekin_id} remember that (?P<subject>[\w\ \']+?) '
-    f'(?P<description>({aux_verbs}) .*)',
+    rf'{tekin_id} remember that (?P<subject>[\w\ \']+?) '
+    rf'(?P<description>({aux_verbs}) .*)',
     flags=re.IGNORECASE,
 )
 

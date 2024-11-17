@@ -1,42 +1,43 @@
+repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    sha: v0.9.4
+    rev: v0.9.4
     hooks:
     -   id: trailing-whitespace
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: end-of-file-fixer
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: autopep8-wrapper
         args:
         - --in-place
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: check-yaml
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: debug-statements
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: flake8
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: check-byte-order-marker
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
     -   id: fix-encoding-pragma
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
         args:
         - --remove
     -   id: check-added-large-files
         exclude: (node_modules|vendor|docs)
-        language_version: python3.6
+        language_version: python3.10
 -   repo: https://github.com/asottile/reorder_python_imports
-    sha: v0.3.5
+    rev: v0.3.5
     hooks:
     -   id: reorder-python-imports
-        language_version: python3.6
+        language_version: python3.10
         args:
         - --remove-import
         - from __future__ import absolute_import
