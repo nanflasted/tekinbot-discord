@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "tekinbot-discord"
+version = "0.1.0"
+description = "TaaD: Tekin (a knowledgable and possibly friendly professor) as a DiscordBot"
+authors = ["nanflasted <nanflasted@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tekinbot_discord"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+"discord.py" = {extras = ["voice"], version = "^2.4.0"}
+mysql-connector-python = "^9.1.0"
+markovify = "^0.9.4"
+PyYAML = "^6.0.2"
+SQLAlchemy = "^2.0.36"
+tenacity = "^9.0.0"
+wikipedia = "^1.4.0"
+wiktionaryparser = "^0.0.97"
+pre-commit = "^4.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+ipython = "^8.29.0"
+ipdb = "^0.13.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

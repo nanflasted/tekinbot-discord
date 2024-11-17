@@ -1,6 +1,7 @@
 import argparse
 import logging
 
+from discord import Intents
 from discord.ext import commands
 
 import tekinbot.utils.db as du
@@ -42,6 +43,7 @@ class TekinBot(commands.Bot):
         super().__init__(
             command_prefix=commands.when_mentioned,
             description=self.description,
+            intents=Intents.all(),
         )
         # set up db here
         du.tekin_db_init(args.nodb)
