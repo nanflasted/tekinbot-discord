@@ -4,9 +4,13 @@ Tekinbot is a simple and expandable discord bot who runs on Python, discord.py, 
 
 ## Preparation:
 
-0.  You need python3.6+, together with MySQL and SQLite
+0.  You need python3.10+, together with MySQL and SQLite; you need also to install `poetry` on your local machine; see [poetry install guide](https://python-poetry.org/docs/#installing-with-the-official-installer)
 
-1.  First of all, set up a python [virtual environment](https://docs.python.org/3/tutorial/venv.html) by running `make venv`
+1.  First of all, set up a python [virtual environment](https://docs.python.org/3/tutorial/venv.html) by running `make`, then running `poetry shell` after to get a shell with venv activated
+
+    a. stuffs WILL NOT RUN if you don't activate the venv; if you really want to run stuff outside the venv, run `poetry env use python3; poetry run {your command}`
+
+    b. optionally you may run `make venv-dev` to get a shell with venv activated
 
 2.  Run `make install-hooks` to install pre-commit hooks
 
@@ -30,21 +34,21 @@ Tekinbot is a simple and expandable discord bot who runs on Python, discord.py, 
         discord:
             bot_token: yourbottokenhere
         ```
-        You will also need some database configs in this secrets file, see the [Database section below](https://github.com/nanflasted/TekinBot#how-to-tekin-database).
+        You will also need some database configs in this secrets file, see the [Database section below](https://github.com/nanflasted/tekinbot-discord#how-to-tekin-database).
 
-        For an example of this `tekin-secrets` config, see [here](https://github.com/nanflasted/TekinBot/tree/master/config/dev/.tekin-secrets.yaml).
+        For an example of this `tekin-secrets` config, see [here](https://github.com/nanflasted/TekinBot/tree/master/config/dev/.tekin-secrets.yaml); note that discord version of the tokens is different, see above
     *   You can then see your tekinbot addition in live action! EHHHHHHH!
 
 7.  You've dunnit! Remember what Tekin would say: take a 5 minute break, drink some water and wash your face...
 
 ## How to add a new module:
 
-1.  All current modules can be seen in [this directory](https://github.com/nanflasted/TekinBot/tree/master/tekinbot/comms),
+1.  All current modules can be seen in [this directory](https://github.com/nanflasted/tekinbot-discord/tree/master/tekinbot/comms),
     if you would like some examples to look at.
 
 2.  Modules are usually implemented as `discord.py`'s `Cog`s. Check [their document](https://discordpy.readthedocs.io/en/latest/ext/commands/api.html#cogs) for more.
 
-3.  Add your module to the [comms/\_\_init\_\_.py](https://github.com/nanflasted/TekinBot/blob/master/tekinbot/comms/__init__.py),
+3.  Add your module to the [comms/\_\_init\_\_.py](https://github.com/nanflasted/tekinbot-discord/blob/master/tekinbot/comms/__init__.py),
     and its individual submodule's \_\_init\_\_.py
 
 #### things we all know we should do but we won't do:
@@ -63,9 +67,9 @@ Tekinbot is a simple and expandable discord bot who runs on Python, discord.py, 
 
     If you do not want to give Tekinbot `root` access to mysql-server, make a user and configure it in `tekin-secrets` config (see above), and make sure to `GRANT` proper priviledges to the user you created; minimally, CRUD-related priviledges should be given.
 
-1.  Figure out what kind of tables you will need, and make a table model similar to [this one](https://github.com/nanflasted/TekinBot/blob/master/tekinbot/db/models/karma.py) in the same directory (tekinbot/db/models); after you   are done writing your table schemas, add your table to [the db module](https://github.com/nanflasted/TekinBot/blob/master/tekinbot/db/models/__init__.py)
+1.  Figure out what kind of tables you will need, and make a table model similar to [this one](https://github.com/nanflasted/tekinbot-discord/blob/master/tekinbot/db/models/karma.py) in the same directory (tekinbot/db/models); after you   are done writing your table schemas, add your table to [the db module](https://github.com/nanflasted/tekinbot-discord/blob/master/tekinbot/db/models/__init__.py)
 
-2.  Implement your module; tekin uses a singleton as SqlAlchemy `engine`, and with that engine creates a single `SessionMaker`, to get these instances, use the utilities from [`tekinbot.utils.db`](https://github.com/nanflasted/TekinBot/blob/master/tekinbot/utils/db.py)
+2.  Implement your module; tekin uses a singleton as SqlAlchemy `engine`, and with that engine creates a single `SessionMaker`, to get these instances, use the utilities from [`tekinbot.utils.db`](https://github.com/nanflasted/tekinbot-discord/blob/master/tekinbot/utils/db.py)
 
 3.  To test on your machine, supply your MySQL-server's access credentials in the `.tekin-secrets.yaml` file, by default it is located at `~/.tekin-secrets.yaml`, you can change the yaml file to be at a different location, but don't commit it as part of your change; make sure the yaml file a dictionary similar to this:
     ```{yaml}
