@@ -127,5 +127,5 @@ class ScryfallSearches(commands.Cog):
         await self.scryfall_callable(message.channel, query, exact)
 
 
-def setup(bot):
-    bot.add_cog(ScryfallSearches(bot))
+async def setup(bot):
+    await bot.add_cog(ScryfallSearches(bot))

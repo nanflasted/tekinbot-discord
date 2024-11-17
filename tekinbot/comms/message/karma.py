@@ -128,5 +128,5 @@ class KarmaKeeper(commands.Cog):
         )
 
 
-def setup(bot):
-    bot.add_cog(KarmaKeeper(bot))
+async def setup(bot):
+    await bot.add_cog(KarmaKeeper(bot))

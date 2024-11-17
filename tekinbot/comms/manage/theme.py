@@ -104,5 +104,5 @@ class ThreadTheme(commands.Cog):
         await message.channel.send(f'Current theme is {current_topic_theme}')
 
 
-def setup(bot):
-    bot.add_cog(ThreadTheme(bot))
+async def setup(bot):
+    await bot.add_cog(ThreadTheme(bot))

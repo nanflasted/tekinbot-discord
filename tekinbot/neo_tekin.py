@@ -52,8 +52,9 @@ class TekinBot(commands.Bot):
 
         self.theme = None
 
+    async def setup_hook(self):
         for ext in tekin_extensions:
-            self.load_extension(ext)
+            await self.load_extension(ext)
 
     def run(self):
         super().run(self.token, reconnect=True)
