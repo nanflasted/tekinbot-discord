@@ -11,9 +11,9 @@ venv:
 	poetry env use python3
 
 install-hooks:
-	pre-commit install -f --install-hooks
+	poetry run pre-commit install -f --install-hooks
 
-server: venv 
+server: venv
 	poetry run python3 -m tekinbot.neo_tekin
 
 dev: install-hooks
