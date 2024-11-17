@@ -10,5 +10,5 @@ class WhatSay(TekinTableBase):
     __tablename__ = 'what_say'
 
     id = Column('id', Integer, primary_key=True, autoincrement=True)
-    subject = Column(String(1024), unique=True)
+    subject = Column(String(512), unique=True)
     description = Column(String(8192))
