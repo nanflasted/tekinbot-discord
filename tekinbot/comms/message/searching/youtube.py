@@ -69,5 +69,5 @@ class YoutubeSearches(commands.Cog):
         await ctx.send(search(query, exact)[0])
 
 
-def setup(bot):
-    bot.add_cog(YoutubeSearches(bot))
+async def setup(bot):
+    await bot.add_cog(YoutubeSearches(bot))
